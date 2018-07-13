@@ -6,10 +6,9 @@ Docker Hub image.
 ## Feature:
 
 - [`aria2`](https://github.com/aria2/aria2)
-- Mount point created at `/data`.
 
 ## How To Download:
 - Metalink
 ```
-docker run -it --rm jaysong/aria2:1.34.0 -M something.meta4 -d /path/to/do
+docker run -it --rm jaysong/aria2:1.34.0 -M something.meta4 -d /path/to/download
 ```
