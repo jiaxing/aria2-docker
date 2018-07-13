@@ -9,9 +9,13 @@ RUN apk upgrade --update && \
       c-ares-dev \
       cppunit-dev \
       expat-dev \
+      gettext-dev \
       gnutls-dev \
+      libgcrypt-dev \
       libssh2-dev \
       libtool \
+      openssl-dev \
+      pkgconfig \
       sqlite-dev \
       zlib-dev \
     && \
