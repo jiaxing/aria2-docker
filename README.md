@@ -12,5 +12,10 @@ Docker Hub image.
 ## How To Download:
 - Metalink
 ```
-docker run -it --rm -v ~/Downloads:/data jaysong/aria2:1.34.0 -M something.meta4
+docker run -d --rm -v ~/Downloads:/data jaysong/aria2:1.34.0 -M something.meta4
+```
+
+- Override aria2.conf
+```
+docker run -it --rm -v ~/Downloads:/data -v ~/.aria2/aria2.conf:/config/aria2/aria2.conf jaysong/aria2:1.34.0 -M something.meta4
 ```
