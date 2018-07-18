@@ -10,6 +10,7 @@ Docker Hub image.
 - A mount point is created at `/config/aria2` and contains the default aria2.conf which sets the download directory as `/data`.
 
 ## How To Download:
+
 - Metalink
 ```
 docker run -d --rm -v ~/Downloads:/data jaysong/aria2:1.34.0 -M something.meta4
@@ -18,4 +19,9 @@ docker run -d --rm -v ~/Downloads:/data jaysong/aria2:1.34.0 -M something.meta4
 - Override aria2.conf
 ```
 docker run -it --rm -v ~/Downloads:/data -v ~/.aria2/aria2.conf:/config/aria2/aria2.conf jaysong/aria2:1.34.0 -M something.meta4
+```
+
+- Override owner/group of the downloaded files
+```
+docker run -u="$(id -u username):$(id -g username)" -it --rm -v ~/Downloads:/data jaysong/aria2:1.34.0 -M something.meta4
 ```
